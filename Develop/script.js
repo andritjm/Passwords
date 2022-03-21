@@ -99,6 +99,7 @@ function generatePassword() {
   for(var i = 0; i < passwordLength; i++) {
     password += character.charAt(Math.floor(Math.random() * character.length))
   }
+  console.log(password)
   return password;
 }
 
