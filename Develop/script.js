@@ -22,7 +22,7 @@ function detLength(){
     alert("Please enter a number value between 8 and 128.");
     detLength();
   } else {
-    alert("How many numbers would you like to add?");
+    alert("Thank you!");
   }
 }
 
@@ -71,7 +71,36 @@ function detNumberCheck() {
   return numberCheck
 }
 
-
+function generatePassword() {
+  detLength();
+  console.log(detLength);
+  detUppercase();
+  console.log(detUppercase);
+  detSpecialCharCheck();
+  console.log(detSpecialCharCheck);
+  detNumberCheck();
+  console.log(detNumberCheck);
+  if (numberCheck && uppercaseCheck && specialCharCheck) {
+    character += numberChar + uppercaseChar + specialChar;
+  } else if (numberCheck && uppercaseCheck) {
+    character += numberChar + uppercaseChar;
+  } else if (numberCheck && specialCharCheck) {
+    character += numberChar + specialChar;
+  } else if (uppercaseCheck && specialCharCheck) {
+    character += uppercaseChar && specialChar;
+  } else if (numberCheck) {
+    character += numberChar;
+  } else if (uppercaseCheck) {
+    character += uppercaseChar;
+  } else if (specialCharCheck) {
+    character += specialChar;
+  }
+  console.log(character)
+  for(var i = 0; i < passwordLength; i++) {
+    password += character.charAt(Math.floor(Math.random() * character.length))
+  }
+  return password;
+}
 
 // Write password to the #password input
 function writePassword() {
