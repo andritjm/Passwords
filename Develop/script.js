@@ -21,8 +21,6 @@ function detLength(){
   } else if (passwordLength<8 || passwordLength>128) {
     alert("Please enter a number value between 8 and 128.");
     detLength();
-  } else {
-    alert("Thank you!");
   }
 }
 
@@ -99,14 +97,15 @@ function generatePassword() {
   for(var i = 0; i < passwordLength; i++) {
     password += character.charAt(Math.floor(Math.random() * character.length))
   }
-  console.log(password)
+  console.log(password);
   return password;
 }
 
 // Write password to the #password input
 function writePassword() {
   var password = generatePassword();
-  console.log(detLength)
+  console.log(detLength);
+  password = password.replace("[object HTMLTextAreaElement]", "");
   var passwordText = document.querySelector("#password");
 
   passwordText.value = password;
