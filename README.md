@@ -4,7 +4,7 @@ By: James Andritsch
 ## Description
 ---
 
-'''
+```
 GIVEN you need a new, secure password
 WHEN you click the button to generate a password
 THEN you are presented with a series of prompts for password criteria
@@ -20,7 +20,7 @@ WHEN all prompts are answered
 THEN a password is generated that matches the selected criteria
 WHEN the password is generated
 THEN the password is either displayed in an alert or written to the page
-'''
+```
 
 ## Links
 ___
