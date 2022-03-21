@@ -29,4 +29,4 @@ ___
 
 ## Screenshot
 ___
-![Passwords](screenshot.png)
+![Passwords](/screencapture.png)
