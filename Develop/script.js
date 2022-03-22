@@ -94,6 +94,7 @@ function generatePassword() {
     character += specialChar;
   }
   console.log(character)
+  var password = "";
   for(var i = 0; i < passwordLength; i++) {
     password += character.charAt(Math.floor(Math.random() * character.length))
   }
@@ -103,14 +104,14 @@ function generatePassword() {
 
 // Write password to the #password input
 function writePassword() {
-  var password = generatePassword();
+  var password = [];
   console.log(detLength);
-  password = password.replace("[object HTMLTextAreaElement]", "");
+  password = generatePassword();
   var passwordText = document.querySelector("#password");
 
   passwordText.value = password;
-
 }
+
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
